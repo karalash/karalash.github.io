@@ -1,0 +1,11 @@
+article {
+	background-color: #d5ebfb;
+    width: 900px;
+    padding: 5px 10px 0;
+    margin: 40px auto;
+    border: 2px solid #a9a9a9;
+}
+
+p {
+	color: #595b5c;
+}

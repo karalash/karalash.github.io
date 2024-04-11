@@ -1,0 +1,19 @@
+.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.title::before, .title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 5px solid #000;
+}
+
+.title:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.title:not(:empty)::after {
+    margin-left: .25em;
+}
