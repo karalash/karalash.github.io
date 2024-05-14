@@ -1,0 +1,55 @@
+body {
+    font-family: 'Bahnschrift', sans-serif;
+}
+
+.subscription-table {
+    border-collapse: collapse;
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+    border: 3.5px solid #8f75ff;
+    border-left: 3px solid #dedede;
+    border-right: 3px solid #dedede;
+    border-bottom: 3px solid #8f75ff;
+}
+
+.subscription-header {
+    color: #8f75ff;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 25px 0;
+}
+
+.subscription-price {
+    background-color: #8f75ff;
+    color: #ffffff;
+    font-size: 28px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.option-block {
+    height: 20px;
+    background-color: transparent;
+    padding: 7px 0;
+    color: #808080;
+}
+
+.option-block.alternate {
+    background-color: #f7f7f7;
+    color: #808080;
+}
+
+.button-cell {
+    padding: 30px 0;
+}
+
+.purchase-button {
+    border: 3px solid #8f75ff;
+    background-color: #ffffff;
+    color: #8f75ff;
+    font-weight: bold;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}

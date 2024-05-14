@@ -1,0 +1,40 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    border-collapse: collapse;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.cell {
+    padding: 8px;
+    border: 1px solid #F9FCFD;
+    text-align: center;
+    float: left;
+    width: 100px;
+    background-color: #CDE6F4;
+}
+
+.cell.th1 {
+    width: 150px;
+    height: 20px;
+    color: white;
+    background-color: #94CCE8;
+    padding: 10px;
+    text-align: left;
+}
+
+.cell.name {
+    background-color: #94CCE8;
+    color: white;
+}
+
+.row.header .cell {
+    background-color: #94CCE8;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,29 @@
+   .studentInfo {
+       width: 600px;
+       border-collapse: collapse;
+   }
+
+   .studentInfo td, .studentInfo th {
+       border: 1px solid black;
+       padding-right: 20px;
+       padding-left: 2px;
+   }
+
+   .studentInfo tr th {
+       border: 1px solid black;
+   }
+
+   .header {
+       text-align: center;
+       font-weight: bolder;
+       background-color: #5dc430 !important;
+       color: white;
+   }
+
+   .studentInfo td:nth-child(even) {
+       background-color: #d5ffb9;
+   }
+
+   .studentInfo td:nth-child(odd) {
+       background-color: #e6ffd3;
+   }

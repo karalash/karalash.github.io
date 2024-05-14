@@ -1,0 +1,37 @@
+.studentInfo {
+    width: 1000px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cell {
+    float: left;
+    width: calc(100% / 6);
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding-right: 20px;
+    padding-left: 2px;
+}
+
+.header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: #5dc430 !important;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    float: left;
+}
+
+.row:nth-child(even) .cell {
+    background-color: #d5ffb9;
+}
+
+.row:nth-child(odd) .cell {
+    background-color: #e6ffd3;
+}
