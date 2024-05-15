@@ -354,3 +354,31 @@ body {
     background: #000;
     color: #fff;
 }
+
+.icon {
+    width: 92px;
+    height: 92px;
+    display: inline-block;
+    background-image: url('../images/social-icons.png');
+    margin-top: 10px;
+}
+
+.icon-github {
+    background-position: 1009px 609px;
+}
+
+.icon-github {
+    background-position: 1009px 609px;
+}
+
+.icon-telegram {
+    background-position: 889px 849px
+}
+
+.icon-email {
+    background-position: 1009px 849px;
+}
+
+.name a {
+    text-decoration: none;
+}
