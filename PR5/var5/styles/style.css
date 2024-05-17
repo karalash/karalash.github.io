@@ -1,0 +1,24 @@
+div { font-family: Oswald;
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 40px 0; }
+.section {
+	height:200px;
+	margin-bottom: 10px;
+	float: left; }
+.main {
+	background-color: #ddd;
+	width: 60%;
+	}
+.sb1, .sb2 {
+	background-color: #ccc;
+	width: 20%;
+	}
+#header,
+#footer {
+	clear: both;
+	width: 100%;
+	height: 100px;
+	background-color: #eee;
+	margin: 10px 0; }
