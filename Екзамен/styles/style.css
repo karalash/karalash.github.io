@@ -1,0 +1,88 @@
+.wrapper {
+	position: relative;
+	width: 600px;
+	margin: 50px auto 0;
+	height: 380px;
+	box-shadow: 0 0 10px 5px;
+}
+
+.wrapper > input {
+  display: none;
+}
+
+#img1:checked ~ .controls label:nth-of-type(1),
+#img2:checked ~ .controls label:nth-of-type(2),
+#img3:checked ~ .controls label:nth-of-type(3),
+#img4:checked ~ .controls label:nth-of-type(4),
+#img5:checked ~ .controls label:nth-of-type(5) {
+	background-color: #BF0000;
+	box-shadow: 0 0 5px 1px #FFFFFF;
+}
+
+#img1:checked ~ .slider > .img1,
+#img2:checked ~ .slider > .img2,
+#img3:checked ~ .slider > .img3,
+#img4:checked ~ .slider > .img4,
+#img5:checked ~ .slider > .img5 {
+	opacity: 1;
+}
+
+.slider {
+	width: inherit;
+	height: inherit;
+}
+
+.slider div {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;        
+} 
+
+.img1 {
+	background-image: url(https://osun.vn.ua/sites/default/files/styles/1253x700fp/public/2021-02/kurchavovolosiy-pavuk-ptakhoid_0.jpg?h=827069f2&itok=T5CRDhkV);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img2 {
+	background-image: url(https://exomania.com.ua/images/Articles_Images/%D0%9F%D1%82%D0%B8%D1%86%D0%B5%D0%B5%D0%B4_%D0%93%D0%BE%D0%BB%D0%B8%D0%B0%D1%84.jpg);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img3 {
+	background-image: url(https://zelenvsit.cx.ua/wp-content/uploads/2018/3/sif-1135.jpg);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img4 {
+	background-image: url(https://exomania.com.ua/images/Articles_Images/Image/%D0%BF%D1%82%D0%B8%D1%86%D0%B5%D0%B5%D0%B4%D0%B0.jpg);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img5 {
+	background-image: url(https://ireland.apollo.olxcdn.com/v1/files/2g0f6y4an1ke3-UA/image;s=1280x960);
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.controls label {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: relative;
+	bottom: 34px;
+	left: 250px;
+	margin-right: 5px;
+	background: #000000;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+}
