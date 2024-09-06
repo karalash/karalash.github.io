@@ -161,16 +161,6 @@ input::placeholder {
 	top: 11px;
 }
 
-.avatar-logo {
-	position: absolute;
-	margin-top: 744px;
-	height: 48px;
-	width: 48px;
-	left: 24px;
-	border: none;
-	border-radius: 50%;
-}
-
 .input-password {
 	position: absolute;
 	margin-top: 431px;
@@ -182,18 +172,4 @@ input::placeholder {
 	width: 24px;
 	top: 13px;
 	left: 271px;
-}
-
-.author-paragraph {
-	position: absolute;
-	margin-top: 750px;
-	left: 78px;
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 18px;
-	color: #000000;
-	opacity: 50%;
-	display: block;
-	height: 36px;
-	width: 138px;
 }
