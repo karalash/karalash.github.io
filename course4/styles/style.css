@@ -1,0 +1,48 @@
+.block {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+}
+
+.practical-works {
+	background-image: url('../images/background1.jpeg');
+}
+
+.laboratory-works {
+	background-image: url('../images/background2.jpg');	
+}
+
+.practical-works, .laboratory-works {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: cover;
+	opacity: 50%;
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.btn {
+    margin-top: 10px;
+    display: block;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    background: #00000080;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
