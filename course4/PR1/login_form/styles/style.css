@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: #201c1c;
@@ -6,14 +12,14 @@ body {
 }
 
 form {
-	width: 360px;
-	height: 800px;
+	max-width: 360px;
+	width: 100%;
 	background-color: #FFFFFF;
 	margin: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
+	padding: 119px 24px 8px 24px;
 }
 
 h1 {
@@ -21,16 +27,13 @@ h1 {
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 36px;
-	margin-top: 119px;
 	display: block;
-	height: 72px;
-	width: 194px;
 	color: #000000CC;
 }
 
 input {
-	width: 312px;
 	height: 48px;
+	width: 100%;
 	border: 1px solid #00000066;
 	border-radius: 10px;
 	display: block;
@@ -38,8 +41,7 @@ input {
 }
 
 #username-email {
-	position: absolute;
-	margin-top: 234px;
+	margin-top: 43px;
 }
 
 input::placeholder {
@@ -49,8 +51,7 @@ input::placeholder {
 }
 
 .forgot-password-link {
-	position: absolute;
-	margin-top: 370px;
+	margin-top: 12px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 21px;
@@ -58,14 +59,12 @@ input::placeholder {
 	color: #2F89FC;
 	display: block;
 	height: 21px;
-	width: 125px;
 }
 
 .login-button {
-	position: absolute;
-	margin-top: 411px;
+	margin-top: 20px;
 	height: 48px;
-	width: 312px;
+	width: 100%;
 	border: none;
 	border-radius: 5px;
 	background-color: #0E64D2;
@@ -77,9 +76,7 @@ input::placeholder {
 }
 
 .signup-paragraph {
-	position: absolute;
-	left: 66px;
-	margin-top: 475px;
+	margin-top: 16px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 21px;
@@ -89,39 +86,33 @@ input::placeholder {
 .signup-link {
 	text-decoration: none;
 	color: #2F89FC;
-	position: absolute;
-	left: 245px;
-	margin-top: 475px;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 21px;
 }
 
 .or-headline {
 	display: flex;
 	align-items: center;
 	column-gap: 9px;
-	position: absolute;
-	margin-top: 513px;
+	margin-top: 17px;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 21px;
 	color: #000000CC;
+	width: 100%;
 }
 
 .or-headline::before,
 .or-headline::after {
 	content: '';
 	height: 1px;
-	width: 139px;
+	width: 45.1%;
 	background-color: #00000080;
 }
 
 .facebook-login-button {
-	position: absolute;
-	margin-top: 557px;
+	position: relative;
+	margin-top: 23px;
 	height: 48px;
-	width: 312px;
+	width: 100%;
 	border: none;
 	border-radius: 10px;
 	background-color: #1877F2;
@@ -141,10 +132,10 @@ input::placeholder {
 }
 
 .google-login-button {
-	position: absolute;
-	margin-top: 628px;
+	position: relative;
+	margin-top: 23px;
 	height: 48px;
-	width: 312px;
+	width: 100%;
 	border: 1px solid #00000066;
 	border-radius: 10px;
 	box-sizing: border-box;
@@ -165,18 +156,18 @@ input::placeholder {
 }
 
 .avatar-logo {
-	position: absolute;
-	margin-top: 744px;
+	margin-top: 68px;
 	height: 48px;
 	width: 48px;
-	left: 24px;
 	border: none;
 	border-radius: 50%;
 }
 
 .input-password {
-	position: absolute;
-	margin-top: 310px;
+	width: 100%;
+	height: 48px;
+	position: relative;
+	margin-top: 28px;
 }
 
 .eye-password-icon {
@@ -184,13 +175,15 @@ input::placeholder {
 	height: 24px;
 	width: 24px;
 	top: 13px;
-	left: 271px;
+	left: 86.86%;
+}
+
+.eye-password-icon:hover {
+	cursor: pointer;
 }
 
 .author-paragraph {
-	position: absolute;
-	margin-top: 750px;
-	left: 78px;
+	margin: 74px 0 0 6px;
 	font-weight: 700;
 	font-size: 12px;
 	line-height: 18px;
@@ -198,5 +191,14 @@ input::placeholder {
 	opacity: 50%;
 	display: block;
 	height: 36px;
-	width: 138px;
+	width: 100%;
+}
+
+.about-author {
+	display: flex;
+	align-self: flex-start;
+}
+
+a:hover, button:hover {
+	cursor: pointer;
 }
