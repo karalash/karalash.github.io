@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student list</title>
+	<script type="text/javascript">
+		function getStudents()
+		{
+			var studentsNumber = parseInt(prompt('Enter the number of students:'))
+			if (isNaN(studentsNumber) || studentsNumber <= 0)
+			{
+				alert('Enter the real number of students, please.')
+				return
+			}
+			var studentList = ''
+			for (var i = 0; i < studentsNumber; i++)
+			{
+				var firstName = prompt('Enter the first name of student number ' + (i + 1) + ':')
+				var lastName = prompt('Enter the last name of student number ' + (i + 1) + ':')
+				studentList += 'Student ' + (i + 1) + ': ' + firstName + ' ' + lastName + '<br>'
+			}
+			document.getElementById('list').innerHTML = studentList
+		}
+	</script>
+</head>
+<body onload="getStudents()">
+	<h1>Student list</h1>
+	<hr>
+	<p id="list"></p>
+</body>
+</html>

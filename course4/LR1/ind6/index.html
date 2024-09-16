@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>2 Numbers sum</title>
+	<script type="text/javascript">
+		function Sum()
+		{
+			var num1 = parseFloat(document.getElementById('number1').value)
+			var num2 = parseFloat(document.getElementById('number2').value)
+
+			if (isNaN(num1) || isNaN(num2))
+			{
+				alert('Enter the correct numbers, please.')
+				return;
+			}
+
+			var sum = num1 + num2
+			document.getElementById('answer').innerHTML = 'Sum = ' + sum
+		}
+	</script>
+</head>
+<body>
+	<p>The first number: <input id="number1"></p>
+	<p>The second number: <input id="number2"></p>
+	<button onclick="Sum()">Add</button>
+	<p id="answer"></p>
+</body>
+</html>

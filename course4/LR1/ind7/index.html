@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Larger number finder</title>
+	<script type="text/javascript">
+		function largerNumber()
+		{
+			var num1 = parseFloat(document.getElementById('number1').value)
+			var num2 = parseFloat(document.getElementById('number2').value)
+
+			if (isNaN(num1) || isNaN(num2))
+			{
+				alert('Enter the correct numbers, please.')
+				return;
+			}
+
+			if (num1 > num2)
+			{
+				var result = num1
+			}
+			else if (num2 > num1)
+			{
+				var result = num2
+			}
+			else
+			{
+				document.getElementById('answer').innerHTML = 'The numbers are equal'
+			}
+			if (num1 != num2)
+			{
+			document.getElementById('answer').innerHTML = 'The larger number is ' + result
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>The first number: <input id="number1"></p>
+	<p>The second number: <input id="number2"></p>
+	<button onclick="largerNumber()">Find the larger number</button>
+	<p id="answer"></p>
+</body>
+</html>

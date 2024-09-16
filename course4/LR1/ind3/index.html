@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hello from JavaScript!</title>
+	<script type="text/javascript">
+		function showDialog()
+		{
+			alert('Hello, world!')
+			document.getElementById('message').innerHTML = 'Hello, world!'
+		}
+		window.onload = showDialog
+	</script>
+</head>
+<body>
+	<p id='message'></p>
+</body>
+</html>

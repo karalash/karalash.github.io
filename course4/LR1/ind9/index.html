@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Just task 9</title>
+	<script type="text/javascript">
+		function showDialog()
+		{
+			var userChoice = confirm('Choose your button below')
+
+			if (userChoice)
+			{
+				document.getElementById('answer').innerHTML = 'You clicked the "OK" button.'
+			}
+			else
+			{
+				document.getElementById('answer').innerHTML = 'You clicked the "Cancel" button.'
+			}
+		}
+		window.onload = showDialog
+	</script>
+</head>
+<body>
+	<p id="answer"></p>
+</body>
+</html>

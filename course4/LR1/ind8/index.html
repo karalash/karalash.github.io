@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Your season</title>
+	<script type="text/javascript">
+		function getSeason()
+		{
+			var month = parseInt(prompt('Enter your month number:'))
+
+			if (isNaN(month) || month < 1 || month > 12)
+			{
+				alert('Enter the correct month number, please.')
+				return;
+			}
+
+			var season
+			if (month == 1 || month == 2 || month == 12)
+			{
+				season = 'Winter'
+			}
+			else if (month >= 3 && month <= 5)
+			{
+				season = 'Spring'
+			}
+			else if (month >= 6 && month <= 8)
+			{
+				season = 'Summer'
+			}
+			else if (month >= 9 && month <= 12)
+			{
+				season = 'Autumn'
+			}
+			alert('Your season is ' + season)
+		}
+	</script>
+</head>
+<body>
+	<button onclick="getSeason()">Get the season</button>
+</body>
+</html>
