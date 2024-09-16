@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student List</title>
+	<script type="text/javascript">
+		function getStudents()
+		{
+			var studentList = '';
+			var i = 1;
+			while (true)
+			{
+				var firstName = prompt('Enter the first name of student number ' + i + ':');
+				if (firstName == null) {
+					break;
+				}
+				var lastName = prompt('Enter the last name of student number ' + i + ':');
+				if (lastName == null) {
+					break;
+				}
+				studentList += 'Student ' + i + ': ' + firstName + ' ' + lastName + '<br>';
+				i++;
+			}
+			document.getElementById('list').innerHTML = studentList;
+		}
+	</script>
+</head>
+<body onload="getStudents()">
+	<h1>Student List</h1>
+	<hr>
+	<p id="list"></p>
+</body>
+</html>
