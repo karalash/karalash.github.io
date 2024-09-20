@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task 1</title>
+    <script type="text/javascript">
+        function nameInput() {
+            console.log("Enter your name here");
+        }
+
+        function Submit() {
+            const name = document.getElementById("name").value;
+            const iceCream = document.getElementById("iceCream").checked;
+            const chocolate = document.getElementById("chocolate").checked;
+            let choice = "";
+
+            if (iceCream) {
+                choice = "ice cream";
+            } else if (chocolate) {
+                choice = "chocolate";
+            }
+
+            if (choice) {
+                console.log(`You chose: ${choice}`);
+            }
+            alert(`Thanks, ${name}, for participating in our survey!`);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); Submit();">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name" oninput="nameInput()" required><br>
+        <label>What do you like more?</label><br>
+        <input type="radio" name="preference" id="iceCream" value="iceCream">
+        <label for="iceCream">Ice cream</label><br>
+        <input type="radio" name="preference" id="chocolate" value="chocolate">
+        <label for="chocolate">Chocolate</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
