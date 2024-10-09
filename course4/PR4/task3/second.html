@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 3</title>
+<style>
+  body {
+    font-family: Arial;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    function printEffect(text, index) {
+      if (index < text.length) {
+        document.getElementById('output').textContent += text[index]; 
+        setTimeout(function() {
+          printEffect(text, index + 1);
+        }, 100);
+      }
+    }
+
+    const defaultText = "Дефолтний текст";
+    
+    var inputText = prompt("Введіть фразу для виведення:") || defaultText;
+
+    printEffect(inputText, 0);
+  </script>
+</body>
+</html>

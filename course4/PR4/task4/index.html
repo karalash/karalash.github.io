@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Онлайн казино</title>
+<style>
+  body {
+    font-family: Arial;
+    font-size: 1.5em;
+  }
+</style>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    function getRandomNumber() {
+      return Math.floor(Math.random() * 11) - 5;
+    }
+
+    const stake = parseFloat(prompt("Введіть суму ставки:"));
+
+    setTimeout(function() {
+      const randomNumber = getRandomNumber();
+      let resultMessage;
+
+      if (randomNumber <= 0) {
+        resultMessage = `Ви програли! Казино - не ваше. Число: ${randomNumber}`;
+      } else {
+        const winnings = stake * randomNumber;
+        resultMessage = `Ви виграли ${winnings} гривень! Число: ${randomNumber}`;
+      }
+
+      document.getElementById('output').textContent = resultMessage;
+    }, 1000);
+  </script>
+</body>
+</html>

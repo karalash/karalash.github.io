@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task 2</title>
+</head>
+<body>
+	<input type="text" id="getTime" size="10" readonly>
+	<button id="updateTime">Update Time</button>
+	<script type="text/javascript">
+		function updateTime() {
+			let time = new Date();
+			let hours = printZero(time.getHours());
+			let minutes = printZero(time.getMinutes());
+			let seconds = printZero(time.getSeconds());
+			getTime.value = hours + ":" + minutes + ":" + seconds;
+		}
+
+		function printZero(value) {
+			if (value < 10) {
+				return '0' + value;
+			}
+			else {
+				return value;
+			}
+		}
+
+		document.getElementById("updateTime").addEventListener("click", updateTime);
+		updateTime();
+	</script>
+</body>
+</html>
