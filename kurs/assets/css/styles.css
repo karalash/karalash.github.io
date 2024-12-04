@@ -1,0 +1,2257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/Be_Vietnam_Pro/BeVietnamPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    font-weight: 400;
+}
+
+header {
+    background-color: #F7F7F8;
+    box-sizing: border-box;
+    padding: 2.5rem 1rem 0 1rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #262626;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.scrolled {
+    padding-top: 0rem;
+}
+
+button {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    white-space: nowrap;
+}
+
+button:hover, a:hover {
+    cursor: pointer;
+}
+
+a:hover, a:active {
+    color: #ED8F09;
+}
+
+.desktop-menu ul li a:hover,
+.desktop-menu ul li a:active {
+    color: #ED8F09;
+}
+
+header button {
+    background-color: #FF9500;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+}
+
+header button:hover, header button:active {
+    background-color: #ED8F09;
+}
+
+#promo-button {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9375rem;
+}
+
+#promo-button.hide {
+    display: none;
+}
+
+.logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.off-screen-menu {
+    background-color: #ED8F09;
+    height: 100vh;
+    width: 100%;
+    max-width: 16rem;
+    position: fixed;
+    top: 0;
+    right: -16rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 0.875rem;
+    transition: .3s ease;
+    z-index: 1;
+    list-style: none;
+    row-gap: 1.5rem;
+}
+
+.off-screen-menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.off-screen-menu li:first-child {
+    margin-top: 12rem;
+}
+
+.off-screen-menu li {
+    margin-right: 3rem;
+}
+
+.off-screen-menu a:hover, .off-screen-menu a:active {
+    color: #262626;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.burger-menu {
+    height: 1.6rem;
+    width: 1.6rem;
+    position: relative;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
+}
+
+.burger-menu span {
+    height: 2px;
+    width: 100%;
+    background-color: #262626;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    z-index: 1;
+}
+
+.burger-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.burger-menu span:nth-child(3) {
+    top: 75%;
+    width: 50%;
+    left: auto;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.burger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    width: 100%;
+    top: 50%;
+    transform: translate(-5%, -50%) rotate(-45deg);
+}
+
+.header-block {
+    padding: 0.875rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f3;
+    box-sizing: border-box;
+    transition: padding-top 0.3s ease;
+}
+
+.login-button {
+    padding: 0.75rem 1.25rem;
+}
+
+.header-buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+}
+
+main {
+    background-color: #F7F7F8;
+    color: #262626;
+    padding: 3.125rem 1rem;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 9.7rem;
+}
+
+.bolt {
+    font-size: 1.5em;
+    width: 3rem;
+    height: 3rem;
+    background-color: #FFF4E5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bolt-icon {
+    height: 1.3125rem;
+    width: 1.125rem;
+}
+
+.hero-section > div:first-child {
+    display: flex;
+    flex-direction: row;
+    background-color: #FCFCFD;
+    padding: calc(1em - 1px);
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    box-sizing: border-box;
+    max-width: 25.5em;
+    position: relative;
+}
+
+.abstract-line {
+    position: absolute;
+    height: 2.6875rem;
+    width: auto;
+    left: -43%;
+    top: -28%;
+}
+
+.hero-section > div:first-child p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.hero-section > div:first-child span {
+    color: #FF9500;
+}
+
+.hero-section h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+    margin-top: 1rem;
+    max-width: 83.2%;
+}
+
+.hero-section > p {
+    margin-top: 0.375rem;
+    max-width: 83.2%;
+}
+
+.hero-section-buttons {
+    margin-top: 3.125rem;
+    display: flex;
+    column-gap: 0.75rem;
+}
+
+.hero-section-buttons button:nth-child(1) {
+    background-color: #FF9500;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 0.875rem 1.25rem;
+}
+
+.hero-section-buttons button:nth-child(1):hover,
+.hero-section-buttons button:nth-child(1):active {
+    background-color: #ED8F09;
+}
+
+.hero-section-buttons button:nth-child(2):hover,
+.hero-section-buttons button:nth-child(2):active {
+    background-color: #F1F1F3;
+}
+
+.hero-section-buttons button:nth-child(2) {
+    background-color: #FFFFFF;
+    font-weight: 500;
+    color: #262626;
+    padding: calc(0.875rem - 1px) calc(1.25rem - 1px);
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.partners-logos {
+    margin-top: 1.875rem;
+    padding: calc(0.625rem - 1px);
+    background-color: #FCFCFD;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    display: flex;
+}
+
+.partners-logos div {
+    height: 4rem;
+    border-right: 1px solid #F1F1F3;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zapier-icon, .spotify-icon, .zoom-icon,
+.amazon-icon, .adobe-icon, .notion-icon, .netflix-icon {
+    height: 1.5rem;
+    width: auto;
+}
+
+.amazon-icon, .adobe-icon, .notion-icon, .netflix-icon {
+    display: none;
+}
+
+.partners-logos div.logo-hidden {
+    border-right: none;
+}
+
+.lazy-video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: black;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background-color: black;
+    margin-top: 1.875rem;
+    border-radius: 10px;
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000033;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    width: 3.375rem;
+    height: 3.375rem;
+    border-radius: 50%;
+    background-color: #FFFFFF33;
+    border: 4px solid #FFFFFF4D;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.benefits-section, .courses-section,
+.testimonials-section, .pricing-section {
+    margin-top: 3.125rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.section-header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.625rem;
+}
+
+.section-description {
+    margin-top: 0.25rem;
+    color: #59595A;
+}
+
+.benefits-section .full-section-description p,
+.courses-section .full-section-description p,
+.testimonials-section .full-section-description p {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.5s ease-out;
+}
+
+.benefits-section .full-section-description p.expanded,
+.courses-section .full-section-description p.expanded,
+.testimonials-section .full-section-description p.expanded {
+    line-clamp: unset;
+    -webkit-line-clamp: unset;
+    height: auto;
+}
+
+.view-all-button {
+    background-color: #FCFCFD;
+    font-weight: 500;
+    color: #262626;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    padding: calc(0.875rem - 1px) calc(1.25rem - 1px);
+    margin-top: 1.25rem;
+    margin-right: auto;
+}
+
+.view-all-button:hover,
+.view-all-button:active {
+    background-color: #F1F1F3;
+}
+
+.benefits-cards-container, .courses-cards-container,
+.testimonials-cards-container {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+}
+
+.benefit-card {
+    background-color: #FFFFFF;
+    padding: 1.875rem;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-card-number {
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 2.3125rem;
+    margin-left: auto;
+}
+
+.benefit-card h2 {
+    color: #333333;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.875rem;
+    margin-top: 1.875rem;
+}
+
+.benefit-card p {
+    color: #4C4C4D;
+    margin-top: 0.625rem;
+}
+
+.diagonal-arrow-icon {
+    height: 0.8125rem;
+    width: 0.8125rem;
+    display: block;
+}
+
+.arrow-button {
+    padding: calc(1.28125rem - 1px);
+    border: 1px solid #F1F1F3;
+    background-color: #FCFCFD;
+    border-radius: 6px;
+    margin-top: 1.875rem;
+    margin-left: auto;
+}
+
+.arrow-button:hover,
+.arrow-button:active {
+    background-color: #F1F1F3;
+}
+
+.course-info {
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F3;
+    padding: calc(1.5rem - 1px);
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.course-info-picture-container {
+    height: 10.75rem; 
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.course-info-picture-container picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.course-time-level-block {
+    margin-top: 1.5rem;
+    display: flex;
+    column-gap: 0.625rem;
+}
+
+.course-info span {
+    color: #4C4C4D;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    padding: calc(0.5rem - 1px) calc(0.875rem - 1px);
+    display: inline-block;
+    line-height: 1.125rem;
+}
+
+.course-author-name {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.875rem;
+}
+
+.course-info h2 {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 600;
+}
+
+.course-description {
+    color: #4C4C4D;
+    margin-top: 0.625rem;
+}
+
+.course-info button {
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color: #F7F7F8;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    color: #262626;
+    font-weight: 500;
+    padding: calc(1em - 1px);
+}
+
+.course-info button:hover,
+.course-info button:active {
+    background-color: #F1F1F3;
+}
+
+.testimonial-card {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-main {
+    background-color: #FFFFFF;
+    color: #4C4C4D;
+    border: 1px solid #F1F1F3;
+    padding: calc(1.875rem - 1px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.testimonial-footer {
+    background-color: #FCFCFD;
+    border-left: 1px solid #F1F1F3;
+    border-right: 1px solid #F1F1F3;
+    border-bottom: 1px solid #F1F1F3;
+    padding: 1.25rem calc(1.875rem - 1px) calc(1.25rem - 1px) calc(1.875rem - 1px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author-img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.testimonial-author-img picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testimonial-author-info {
+    display: flex;
+    column-gap: 0.625rem;
+    align-items: center;
+}
+
+.testimonial-author-name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.testimonial-footer button {
+    margin-left: auto;
+    background-color: #F7F7F8;
+    color: #262626;
+    font-weight: 500;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    padding: calc(0.875rem - 1px) calc(1rem - 1px);
+}
+
+.testimonial-footer button:hover,
+.testimonial-footer button:active {
+    background-color: #F1F1F3;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: #F7F7F8;
+    border-radius: 10px;
+    max-width: 37.5rem;
+    width: 90%;
+    padding: 1.25rem;
+    box-shadow: 0 8px 20px #00000026;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    font-size: 1.5rem;
+    color: #333333;
+    cursor: pointer;
+}
+
+.modal-author {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.modal-author img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal-author h3 {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+#modal-review-text {
+    color: #4C4C4D;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.pricing-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-section-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-tabs {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.pricing-tabs button {
+    padding: 0.75rem 1.5rem;
+    color: #4C4C4D;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.pricing-tabs button[active] {
+    background-color: #FF9500;
+    color: #FFFFFF;
+}
+
+.pricing-tabs button:hover,
+.pricing-tabs button:active {
+    color: #ED8F09;
+}
+
+.pricing-tabs button[active],
+.pricing-tabs button[active] {
+    color: #FFFFFF;
+}
+
+.pricing-cards-container {
+    margin-top: 2.5rem;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem;
+}
+
+.pricing-info {
+    background-color: #FCFCFD;
+    border: 1px solid #F1F1F3;
+    padding: calc(1.875rem - 1px) calc(1.25rem - 1px) calc(1.25rem - 1px) calc(1.25rem - 1px);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-header {
+    background-color: #FFF9F0;
+    border: 1px solid #FFEACC;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    padding: calc(0.5rem - 1px);
+    box-sizing: border-box;
+}
+
+.pricing-header h2 {
+    font-size: 1rem;
+    line-height: 1.6875rem;
+    font-weight: 500;
+}
+
+.pricing-cost {
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 2.3125rem;
+    margin-top: 1.875rem;
+}
+
+.pricing-cost span {
+    color: #4C4C4D;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 0.625rem
+}
+
+.pricing-available-features {
+    margin-top: 1.875rem;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F3;
+    padding: calc(1.25rem - 1px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pricing-available-features > p:first-child {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 500;
+}
+
+.pricing-feature {
+    margin-top: 1.25rem;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    padding: calc(0.75rem - 1px);
+    width: 100%;
+    box-sizing: border-box;
+    color: #4C4C4D;
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.check-mark-icon {
+    font-size: 0.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #FFF4E5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #262626;
+}
+
+.cross-mark-icon {
+    font-size: 0.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid #F1F1F3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #262626;
+}
+
+.pricing-info button {
+    background-color: #FF9500;
+    color: #FFFFFF;
+    font-weight: 600;
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 1.125rem;
+    width: 100%;
+}
+
+.pricing-info button:hover,
+.pricing-info button:active {
+    background-color: #ED8F09;
+}
+
+.faq-section {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-top: 3.125rem;
+    padding: 1.5rem;
+}
+
+.faq-section-description h1 {
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+    font-weight: 600;
+}
+
+.faq-section-description > p {
+    color: #333333;
+    margin-top: 0.5rem;
+}
+
+.faq-section-description > button {
+    margin-top: 1.25rem;
+    background-color: #FFFFFF;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    padding: calc(0.875rem - 1px) calc(1.25rem - 1px);
+    color: #262626;
+}
+
+.faq-section-description > button:hover,
+.faq-section-description > button:active {
+    background-color: #F1F1F3;
+}
+
+.question-cards-container {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+}
+
+.question-card {
+    border: 1px solid #F1F1F3;
+    border-radius: 10px;
+    padding: calc(1.25rem - 1px) calc(1.5rem - 1px) 0;
+}
+
+.faq-question {
+    display: flex;
+    column-gap: 2.5rem;
+    align-items: center;
+    padding-bottom: calc(1.25rem - 1px);
+}
+
+.faq-question p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-right: auto;
+}
+
+.question-tab-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #FFF4E5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+    font-size: 1rem;
+}
+
+.question-tab-icon:hover {
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding: calc(1.25rem - 1px) 0 calc(1.5rem - 1px);
+    border-top: 1px solid #F1F1F3;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+.faq-answer p {
+    color: #4C4C4D;
+}
+
+.faq-answer button {
+    margin-top: 1.25rem;
+    width: 100%;
+    background-color: #F7F7F8;
+    border: 1px solid #F1F1F3;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: calc(0.75rem - 1px) calc(1.25rem - 1px);
+    color: #333333;
+    font-weight: 500;
+    white-space: normal;
+    column-gap: 1rem;
+}
+
+.faq-answer button:hover,
+.faq-answer button:active {
+    background-color: #F1F1F3;
+}
+
+.arrow-round-icon {
+    margin-left: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4C4C4C;
+}
+
+footer {
+    background-color: #FFFFFF;
+    padding: 3.125rem 1.25rem 1.5rem;
+}
+
+footer a:hover, footer a:active,
+.footer-contacts p:hover,
+.footer-contacts p:active,
+.footer-nav-column h2 a:hover,
+.footer-nav-column h2 a:active {
+    color: #ED8F09;
+}
+
+.footer-contacts div {
+    display: flex;
+    column-gap: 0.375rem;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.footer-contacts div:hover {
+    cursor: pointer;
+}
+
+.footer-contacts div:first-child {
+    margin-top: 1.875rem;
+}
+
+.footer-contacts i {
+    font-size: 1.1rem;
+}
+
+.footer-contacts p {
+    font-size: 0.9375rem;
+    color: #262626;
+    line-height: 1.4375rem;
+}
+
+footer .logo-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 1.125rem;
+}
+
+.footer-nav {
+    margin-top: 1.5rem;
+    display: flex;
+    column-gap: 2.75rem;
+}
+
+.footer-nav-column h2 a {
+    color: #262626;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 600;
+}
+
+.footer-nav-column a {
+    text-decoration: none;
+    color: #59595A;
+}
+
+.footer-nav-column li {
+    list-style: none;
+    margin-top: 0.25rem;
+}
+
+.footer-nav-column li:first-child {
+    margin-top: 0.625rem;
+}
+
+.footer-social-profiles {
+    margin-top: 1.5rem;
+}
+
+.footer-social-profiles h2 {
+    color: #262626;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+    font-weight: 600;
+}
+
+.footer-social-icons {
+    display: flex;
+    column-gap: 0.875rem;
+    margin-top: 0.625rem;
+}
+
+.footer-content {
+    margin-bottom: 1.25rem;
+}
+
+.footer-social-icons div {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: #F7F7F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid #F1F1F3;
+    box-sizing: border-box;
+}
+
+.footer-social-icons a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.25rem;
+}
+
+.footer-copyright {
+    color: #656567;
+    text-align: center;
+    padding-top: 1.25rem;
+    border-top: 1px solid #F1F1F3;
+}
+
+@media (max-width: 389px) {
+    body {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
+
+    #promo-button {
+        font-size: 0.625rem;
+    }
+
+    a {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+    }
+
+    .hero-section > div:first-child {
+        max-width: 23em;
+        padding: calc(0.5rem - 1px);
+    }
+
+    .hero-section > div:first-child p {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+    }
+
+    .bolt {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .bolt-icon {
+        height: 0.9rem;
+        width: auto;
+    }
+
+    .abstract-line {
+        height: 1.8rem;
+        width: auto;
+        left: -55%;
+        top: -25%;
+    }
+
+    .hero-section h1 {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .zapier-icon, .spotify-icon, .zoom-icon,
+    .amazon-icon, .adobe-icon, .notion-icon, .netflix-icon {
+        height: 1.2rem;
+        width: auto;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .benefit-card-number {
+        font-size: 2.7rem;
+        line-height: 1.75rem;
+    }
+
+    .benefit-card h2 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+
+    .arrow-button {
+        padding: calc(1rem - 1px);
+    }
+
+    .course-author-name {
+        font-size: 0.85rem;
+        line-height: 1rem;
+    }
+
+    .course-info h2 {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .testimonial-author-name {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .testimonial-footer button {
+        padding: calc(0.65rem - 1px) calc(0.65rem - 1px);
+    }
+
+    .testimonial-author-img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .pricing-available-features > p:first-child {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .pricing-cost {
+        font-size: 2.75rem;
+    }
+
+    .faq-section-description h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .faq-question p {
+        font-size: 0.85rem;
+        line-height: 1.25rem;
+    }
+
+    .faq-question {
+        column-gap: 1rem;
+    }
+
+    .faq-answer button {
+        column-gap: 0.5rem;
+    }
+
+    .footer-contacts p {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+    }
+
+    .footer-nav-column h2 a {
+        font-size: 0.95rem;
+        line-height: 1.25rem;
+    }
+
+    .footer-social-profiles h2 {
+        font-size: 0.95rem;
+        line-height: 1.25rem;
+    }
+
+    .footer-social-icons div {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    footer .logo-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 481px) {
+    .partners-logos div {
+        width: calc(100% / 4);
+    }
+
+    .amazon-icon {
+        display: inline-block;
+    }
+
+    .partners-logos div.logo-hidden:nth-child(4) {
+        border-right: 1px solid #F1F1F3;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    header {
+        padding: 1.25em 2em 0 2em;
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+    }
+
+    .logo-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+
+    .desktop-menu ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .desktop-menu ul li {
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        border-radius: 6px;
+    }
+
+    .desktop-menu ul li.menu-active-page {
+        background-color: #F1F1F3;
+    }
+
+    .desktop-menu ul li:first-child {
+        margin-left: 0.75rem;
+    }
+
+    .desktop-menu ul li a {
+        text-decoration: none;
+        color: #262626;
+    }
+
+    .header-buttons {
+        display: inline-block;
+    }
+
+    .login-button {
+        margin-left: 1.25rem;
+    }
+
+    .header-block {
+        padding: 1rem 0;
+    }
+
+    main {
+        padding: 4rem 3rem;
+    }
+
+    .hero-section {
+        margin-top: 8.5rem;
+    }
+
+    .benefits-section, .courses-section,
+    .testimonials-section, .pricing-section {
+        margin-top: 6.25rem;
+    }
+
+    .hero-section > div:first-child {
+        justify-content: center;
+        max-width: 29em;
+    }
+    
+    .abstract-line {
+        left: -35%;
+        top: -40%;
+    }
+    
+    .hero-section > div:first-child p {
+        font-size: 1.5rem;
+    }
+
+    .partners-logos div {
+        width: calc(100% / 5);
+    }
+
+    .adobe-icon {
+        display: inline-block;
+    }
+
+    .partners-logos div.logo-hidden:nth-child(5) {
+        border-right: 1px solid #F1F1F3;
+    }
+
+    .benefits-cards-container, .courses-cards-container,
+    .testimonials-cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .benefit-card, .course-info, .testimonial-card {
+        width: calc(50% - 0.625rem);
+    }
+
+    .course-info span {
+        font-size: 0.875rem;
+    }
+
+    .testimonial-main, .pricing-available-features {
+        flex-grow: 1;
+    }
+
+    .pricing-cards-container {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 1.875rem;
+    }
+
+    .course-info, .benefit-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-description {
+        margin-bottom: 1.5rem;
+    }
+
+    .course-info button, .arrow-button {
+        margin-top: auto
+    }
+
+    .benefit-card p {
+        margin-bottom: 1.875rem;
+    }
+
+    footer {
+        padding: 3.125rem 1.75rem 1.25rem;
+    }
+
+    .footer-contacts p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .footer-content {
+        display: flex;
+        margin-bottom: 1.875rem;
+    }
+
+    .footer-social-profiles {
+        margin-left: 2.5rem;
+        margin-top: 0;
+    }
+    
+    .footer-nav {
+        margin-left: auto;
+        margin-top: 0;
+        column-gap: 2.5rem;
+    }
+
+    .faq-section {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header-block {
+        padding: 1rem 2rem;
+    }
+
+    .hero-section > div:first-child {
+        max-width: 33rem;
+    }
+    
+    .abstract-line {
+        left: -31%;
+        top: -39%;
+    }
+    
+    .hero-section > div:first-child p {
+        font-size: 1.75rem;
+    }
+
+    .partners-logos div {
+        width: calc(100% / 6);
+    }
+
+    .notion-icon {
+        display: inline-block;
+    }
+
+    .partners-logos div.logo-hidden:nth-child(6) {
+        border-right: 1px solid #F1F1F3;
+    }
+
+    .video-container {
+        aspect-ratio: 2 / 1;
+    }
+
+    .benefit-card {
+        width: calc(100% / 3 - 0.8rem);
+    }
+
+    .pricing-cards-container {
+        padding: 2.5rem;
+    }
+
+    footer {
+        padding: 3.125rem 3.125rem 1.25rem;
+    }
+
+    .footer-social-profiles {
+        margin: 0 4rem;
+    }
+    
+    .footer-nav {
+        column-gap: 4rem;
+    }
+
+    .full-section-description {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .view-all-button, .pricing-tabs {
+        margin: 0 0 0 auto;
+        align-self: flex-start;
+    }
+
+    .section-description {
+        max-width: 73%;
+    }
+
+    .pricing-section .section-description {
+        max-width: 65%;
+    }
+
+    .pricing-header h2 {
+        font-size: 1.125rem;
+    }
+
+    .faq-section {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 1.875rem;
+        padding: 2.5rem;
+    }
+
+    .question-cards-container {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .faq-section-description {
+        width: 60%;
+    }
+
+    .course-time-level-block, .course-author-name {
+        margin-top: 0;
+    }
+
+    .course-author-name {
+        margin-left: auto;
+    }
+
+    .course-details-block {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .course-info-picture-container {
+        height: 14rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    header {
+        padding: 1.25rem 1.25rem 0 1.25rem;
+    }
+
+    .header-block {
+        padding: 1rem 3.75rem 1.25rem;
+    }
+
+    .desktop-menu ul li:first-child {
+        margin-left: 3.125rem;
+    }
+
+    .desktop-menu ul li {
+        margin-right: 0.375rem;
+    }
+
+    .login-button {
+        padding: 0.75rem 1.5rem;
+        margin-left: 1.875rem;
+    }
+
+    main {
+        padding: 8.975rem 5rem 6.25rem;
+    }
+
+    .section-header {
+        font-size: 2.375rem;
+        line-height: 3.5625rem;
+    }
+
+    .hero-section {
+        margin-top: 5rem;
+    }
+
+    .hero-section > div:first-child {
+        max-width: 42rem;
+        padding: calc(0.75rem - 1px) calc(1.5rem - 1px) calc(0.75rem - 1px) calc(0.75rem - 1px);
+    }
+    
+    .abstract-line {
+        left: -25%;
+        top: -40%;
+    }
+    
+    .hero-section > div:first-child p {
+        font-size: 2.25rem;
+        line-height: 3.375rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+        line-height: 2.625rem;
+    }
+
+    .partners-logos {
+        margin-top: 6.25rem;
+    }
+
+    .video-container {
+        margin-top: 5rem;
+    }
+
+    .partners-logos div {
+        width: calc(100% / 7);
+    }
+
+    .netflix-icon {
+        display: inline-block;
+    }
+
+    .benefits-cards-container, .courses-cards-container,
+    .testimonials-cards-container, .pricing-cards-container {
+        margin-top: 3.75rem;
+    }
+
+    .benefit-card, .course-info, .testimonial-main {
+        padding: 2.5rem;
+    }
+
+    .testimonial-footer {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .course-info-picture-container {
+        height: 16.625rem;
+    }
+
+    .pricing-cards-container {
+        padding: 3.125rem;
+    }
+
+    .pricing-info {
+        padding: calc(2.5rem - 1px) calc(1.5rem - 1px) calc(1.5rem - 1px) calc(1.5rem - 1px);
+    }
+
+    .pricing-header {
+        padding: calc(0.625rem - 1px);
+    }
+
+    .pricing-header h2 {
+        line-height: 1.875rem;
+    }
+
+    .pricing-cost {
+        font-size: 3.75rem;
+        line-height: 2.75rem;
+        margin-top: 3.125rem;
+    }
+
+    .pricing-cost span {
+        font-size: 1rem;
+        line-height: 0.75rem
+    }
+
+    .pricing-available-features {
+        margin-top: 3.125rem;
+        padding: calc(1.875rem - 1px) calc(3.75rem - 1px);
+    }
+
+    .pricing-available-features > p:first-child {
+        margin-bottom: 0.25rem;
+    }
+
+    .faq-section {
+        margin-top: 6.25rem;
+        column-gap: 3rem;
+        padding: 5rem;
+    }
+
+    .faq-section-description h1 {
+        font-size: 2.375rem;
+        line-height: 2.85rem;
+    }
+
+    .faq-section-description > button {
+        margin-top: 2.5rem;
+    }
+
+    .question-cards-container {
+        width: 85%;
+    }
+
+    .question-card {
+        padding: calc(2.5rem - 1px) calc(2.5rem - 1px) 0;
+    }
+
+    .faq-question p {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    .faq-answer {
+        padding: calc(2.5rem - 1px) 0;
+    }
+
+    .faq-answer button {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .faq-question {
+        padding-bottom: calc(2.5rem - 1px);
+    }
+
+    footer {
+        padding: 3.75rem 5rem 1.25rem;
+    }
+
+    .footer-copyright {
+        padding-top: 1.875rem;
+    }
+
+    .footer-social-profiles {
+        margin-right: 4.375rem;
+        margin-left: 6.25rem;
+    }
+    
+    .footer-nav {
+        column-gap: 6.25rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    body {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    button {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    header a {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    header {
+        padding: 1.25rem 1.875rem 0;
+    }
+
+    .header-block {
+        padding: 1.25rem 8.25rem 1.5rem;
+    }
+
+    .desktop-menu ul li:first-child {
+        margin-left: 3.125rem;
+        border-radius: 8px;
+    }
+
+    .desktop-menu ul li {
+        padding: 0.875rem 1.5rem;
+    }
+
+    .desktop-menu ul li {
+        margin-right: 0.125rem;
+    }
+
+    .login-button {
+        padding: 0.875rem 2.125rem;
+        border-radius: 8px;
+    }
+
+    main {
+        padding: 8.975rem 10.125rem 8.875rem;
+    }
+
+    .section-header {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+
+    .section-description {
+        margin-top: 0.375rem;
+    }
+
+    .hero-section {
+        margin-top: 6.25rem;
+    }
+
+    .hero-section > div:first-child {
+        max-width: 62rem;
+        padding: calc(0.875rem - 1px) calc(1.875rem - 1px) calc(0.875rem - 1px) calc(1.25rem - 1px);
+        border-radius: 11px;
+    }
+    
+    .logo-icon {
+        width: 3.375rem;
+        height: 3.375rem;
+    }
+
+    .abstract-line {
+        left: -19%;
+        top: -35%;
+    }
+    
+    .hero-section > div:first-child p {
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+
+    .bolt {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .bolt-icon {
+        height: 1.875rem;
+        width: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 2.375rem;
+        line-height: 3.5625rem;
+        margin-top: 1.25rem;
+    }
+
+    .hero-section > p {
+        margin-top: 0.625rem;
+    }
+
+    .hero-section-buttons button:nth-child(1) {
+        padding: 1.125rem 1.5rem;
+        border-radius: 8px;
+    }
+
+    .hero-section-buttons button:nth-child(2) {
+        padding: 1.125rem 1.5rem;
+        border-radius: 8px;
+    }
+
+    .hero-section-buttons {
+        margin-top: 3.75rem;
+    }
+
+    .partners-logos {
+        padding: 1.875rem;
+    }
+
+    .partners-logos div {
+        height: 5.875rem;
+    }
+
+    .zapier-icon, .spotify-icon, .zoom-icon,
+    .amazon-icon, .adobe-icon, .notion-icon, .netflix-icon {
+        height: 2.125rem;
+        width: auto;
+    }
+
+    .video-container {
+        margin-top: 6.25rem;
+    }
+
+    .play-button {
+        width: 4.5rem;
+        height: 4.5rem;
+        font-size: 2rem;
+    }
+
+    .benefits-section {
+        margin-top: 9.375rem;
+    }
+
+    .view-all-button {
+        padding: calc(1.125rem - 1px) calc(1.5rem - 1px);
+        border-radius: 8px;
+    }
+
+    .benefits-cards-container, .courses-cards-container,
+    .testimonials-cards-container, .pricing-cards-container {
+        margin-top: 5rem;
+    }
+
+    .benefit-card, .course-info, .testimonial-main {
+        padding: 3.125rem;
+    }
+
+    .benefit-card-number {
+        font-size: 5rem;
+        line-height: 3.6875rem;
+    }
+
+    .benefit-card h2 {
+        margin-top: 3.125rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    .benefit-card p {
+        margin-top: 0.875rem;
+        margin-bottom: 3.125rem;
+    }
+
+    .diagonal-arrow-icon {
+        height: 1.0625rem;
+        width: 1.0625rem;
+    }
+
+    .arrow-button {
+        padding: calc(1.78125rem - 1px);
+        border-radius: 8px;
+    }
+
+    .benefit-card, .course-info, .video-container, .partners-logos {
+        border-radius: 12px;
+    }
+
+    .course-info-picture-container {
+        height: 23.75rem;
+        border-radius: 8px;
+    }
+
+    .course-details-block {
+        margin-top: 1.875rem;
+    }
+
+    .course-info span {
+        border-radius: 8px;
+        padding: calc(0.625rem - 1px) calc(1rem - 1px);
+        font-size: 1.125rem;
+        line-height: 1.4375rem;
+    }
+
+    .course-author-name {
+        font-size: 1.25rem;
+        line-height: 1.5625rem;
+    }
+
+    .course-info h2 {
+        margin-top: 1.875rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+
+    .course-description {
+        margin-top: 0.875rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .course-info button {
+        border-radius: 8px;
+    }
+
+    .courses-cards-container, .testimonials-cards-container {
+        gap: 1.875rem;
+    }
+
+    .course-info, .testimonial-card {
+        width: calc(50% - 0.9375rem);
+    }
+
+    .testimonial-main {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .testimonial-footer {
+        padding: 1.875rem 3.125rem;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    .testimonial-author-info {
+        column-gap: 1rem;
+    }
+
+    .testimonial-author-img {
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 8px;
+    }
+
+    .testimonial-author-name {
+        font-size: 1.125rem;
+        line-height: 1.6975rem;
+    }
+
+    .testimonial-footer button {
+        border-radius: 8px;
+        padding: calc(1.125rem - 1px) calc(1.5rem - 1px);
+    }
+
+    .pricing-section {
+        margin-top: 10.5rem;
+    }
+
+    .pricing-tabs button {
+        padding: 0.875rem 1.875rem;
+    }
+
+    .pricing-cards-container {
+        padding: 5rem;
+    }
+
+    .pricing-info {
+        padding: calc(3.125rem - 1px) calc(1.875rem - 1px) calc(1.875rem - 1px) calc(1.875rem - 1px);
+    }
+
+    .pricing-header {
+        padding: calc(0.75rem - 1px);
+        border-radius: 6px;
+    }
+
+    .pricing-header h2 {
+        font-size: 1.375rem;
+        line-height: 2.3125rem;
+    }
+
+    .pricing-cost {
+        font-size: 5rem;
+        line-height: 3.625rem;
+    }
+
+    .pricing-cost span {
+        font-size: 1.25rem;
+        line-height: 0.9375rem
+    }
+
+    .pricing-available-features {
+        padding: calc(2.5rem - 1px) calc(4.375rem - 1px);
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+
+    .pricing-available-features > p:first-child {
+        margin-bottom: 0.625rem;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+
+    .check-mark-icon, .cross-mark-icon {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 6px;
+    }
+
+    .pricing-feature {
+        border-radius: 8px;
+        padding: calc(0.875rem - 1px);
+        column-gap: 0.75rem;
+    }
+
+    .faq-section {
+        margin-top: 9.375rem;
+        column-gap: 7.5rem;
+        padding: 6.25rem;
+    }
+
+    .faq-section-description h1 {
+        font-size: 3rem;
+        line-height: 3.625rem;
+    }
+
+    .faq-section-description {
+        width: 30%;
+    }
+
+    .question-cards-container {
+        width: 65%;
+    }
+
+    .faq-section-description > p {
+        margin-top: 0.625rem;
+    }
+
+    .faq-section-description > button {
+        margin-top: 3.125rem;
+        padding: calc(1.125rem - 1px) calc(1.5rem - 1px);
+    }
+
+    .question-cards-container {
+        row-gap: 1.875rem;
+    }
+
+    .question-card {
+        padding: calc(1.875rem - 1px) calc(3.125rem - 1px) 0;
+    }
+
+    .faq-answer {
+        padding: calc(3.125rem - 1px) 0;
+    }
+
+    .faq-question {
+        padding-bottom: calc(1.875rem - 1px);
+    }
+
+    .faq-question p {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+
+    .faq-answer button {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+        margin-top: 3.125rem;
+        padding: calc(1.25rem - 1px) calc(1.875rem - 1px);
+        border-radius: 8px;
+    }
+
+    .question-tab-icon {
+        height: 3.25rem;
+        width: 3.25rem;
+        border-radius: 8px;
+        font-size: 1.5rem;
+    }
+
+    .arrow-round-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+
+    footer {
+        padding: 6.25rem 10.125rem 1.875rem;
+    }
+
+    footer .logo-icon {
+        width: 3.375rem;
+        height: 3.375rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .footer-contacts div {
+        margin-top: 1.25rem;
+    }
+
+    .footer-contacts p {
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+    .footer-contacts i {
+        font-size: 1.3125rem;
+    }
+
+    .footer-social-profiles {
+        margin-right: 0;
+        margin-left: 9.375rem;
+    }
+
+    .footer-social-profiles h2, .footer-nav-column h2 a {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+
+    .footer-social-icons {
+        margin-top: 0.875rem;
+    }
+
+    .footer-social-icons div {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 8px;
+        font-size: 1.5rem;
+    }
+
+    .footer-nav {
+        column-gap: 9.375rem;
+    }
+
+    .footer-nav-column li {
+        margin-top: 0.5rem;
+    }
+
+    .footer-nav-column li:first-child {
+        margin-top: 0.875rem;
+    }
+
+    .footer-copyright {
+        padding-top: 3.125rem;
+    }
+
+    .footer-content {
+        margin-bottom: 3.125rem;
+    }
+}
