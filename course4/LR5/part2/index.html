@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Генератор</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<div id="tabs">
+		<div class="tab whiteborder">border-radius</div>
+		<div class="tab">color</div>
+		<div class="tab">cursor</div>
+		<div class="tabContent">
+			<div>Верхній лівий радіус:
+				<input type="range" id="rtl" min="0" max="100" value="0" oninput="generateBorderRadius()">
+				<input type="text" id="ttl" value="0">
+			</div>
+			<div>Верхній правий радіус:
+				<input type="range" id="rtr" min="0" max="100" value="0" oninput="generateBorderRadius()">
+				<input type="text" id="ttr" value="0">
+			</div>
+			<div>Нижній правий радіус:
+				<input type="range" id="rbr" min="0" max="100" value="0" oninput="generateBorderRadius()">
+				<input type="text" id="tbr" value="0">
+			</div>
+			<div>Нижній лівий радіус:
+				<input type="range" id="rbl" min="0" max="100" value="0" oninput="generateBorderRadius()">
+				<input type="text" id="tbl" value="0">
+			</div>
+			<div id="block" style="background-color: green; width: 100px; height: 100px;"></div>
+			<textarea id="cssOutput" readonly></textarea>
+		</div>
+		<div class="tabContent hide">
+			<div>Колір:
+				<input type="color" id="colorPicker" oninput="generateColor()">
+			</div>
+			<div id="colorBlock" style="width: 100px; height: 100px;"></div>
+			<textarea id="colorCssOutput" readonly></textarea>
+		</div>
+		<div class="tabContent hide">
+			<div>Тип курсора:
+				<select id="cursorPicker" onchange="generateCursor()">
+					<option value="default">default</option>
+					<option value="pointer">pointer</option>
+					<option value="crosshair">crosshair</option>
+					<option value="move">move</option>
+					<option value="text">text</option>
+				</select>
+			</div>
+			<div id="cursorBlock" style="width: 100px; height: 100px; background-color: lightgrey;"></div>
+			<textarea id="cursorCssOutput" readonly></textarea>
+		</div>
+	</div>
+	<script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        form {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+    <div id="location">Your location will go here.</div>
+    <div id="distance">Distance from College will go here.</div>
+    <div id="map"></div>
+    <form id="destinationForm">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" placeholder="Enter latitude">
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" placeholder="Enter longitude">
+        <button type="button" id="goTo">Go to destination</button>
+    </form>
+    <script src="myLoc.js"></script>
+</body>
+</html>

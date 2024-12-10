@@ -1,0 +1,47 @@
+{
+    "title": "Каталог гральних карт",
+    "products": [
+        {
+            "category": "4 Regular Index",
+            "isNew": true,
+            "image": "images/img1.jpg",
+            "title": "Modiano Poker Old Trophy Moto 100% Plastic Blue",
+            "price": "320 ГРН",
+            "isComingSoon": true
+        },
+        {
+            "category": "4 Regular Index",
+            "image": "images/img2.jpg",
+            "title": "Modiano Poker Golden Trophy 100% Plastic Red",
+            "oldPrice": "320 ГРН",
+            "price": "285 ГРН"
+        },
+        {
+            "category": "2 Jumbo Index",
+            "isHit": true,
+            "image": "images/img3.jpg",
+            "title": "Modiano Texas Poker 100% Plastic Light Blue",
+            "price": "320 ГРН"
+        },
+        {
+            "category": "2 Jumbo Index",
+            "isHit": true,
+            "image": "images/img4.jpg",
+            "title": "Modiano Texas Poker 100% Plastic Light Red",
+            "price": "330 ГРН"
+        },
+        {
+            "category": "2 Jumbo Index",
+            "isHit": false,
+            "image": "images/img5.jpg",
+            "title": "Modiano Texas Poker Hold Em (brown) 100% Plastic",
+            "price": "350 ГРН"
+        },
+        {
+            "category": "4 Jumbo Index",
+            "image": "images/img6.jpg",
+            "title": "Modiano Poker playing cards (grey) 100% Plastic",
+            "price": "360 ГРН"
+        }
+    ]
+}

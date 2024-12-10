@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>Каталог товарів</title>
+</head>
+<body>
+    <h1>Обов'язково додайте своє замовлення</h1>
+    <div class="wrap">
+        <div class="swipe swipe-left">&lt;</div>
+        <div class="product-category">
+            <div class="product-item">
+                <div class="category-title">4 Regular Index</div>
+                <div class="category-divider"></div>
+                <span class="new-label">НОВИНКА</span>
+                <img src="images/img1.jpg" alt="гральні карти">
+                <div class="product-title">Modiano Poker Old Trophy Moto 100% Plastic Blue</div>
+                <div class="product-price">320 ГРН</div>
+                <div class="coming-soon">НЕЗАБАРОМ У ПРОДАЖІ</div>
+            </div>
+            <div class="divider"></div>
+            <div class="product-item">
+                <div class="category-title">4 Regular Index</div>
+                <div class="category-divider"></div>
+                <img src="images/img2.jpg" alt="гральні карти">
+                <div class="product-title">Modiano Poker Golden Trophy 100% Plastic Red</div>
+                <div class="price-block">
+                    <span class="product-old-price">320 ГРН</span>
+                    <div class="product-price">
+                        285 ГРН
+                    </div>
+                </div>
+                <a class="add-to-cart">У КОРЗИНУ</a>
+            </div>
+            <div class="divider"></div>
+            <div class="product-item">
+                <div class="category-title">2 Jumbo Index</div>
+                <div class="category-divider"></div>
+                <span class="hit-label">ХІТ</span>
+                <img src="images/img3.jpg" alt="гральні карти">
+                <div class="product-title">Modiano Texas Poker 100% Plastic Light Blue</div>
+                <div class="product-price">320 ГРН</div>
+                <a class="add-to-cart">У КОРЗИНУ</a>
+            </div>
+            <div class="divider"></div>
+            <div class="product-item">
+                <div class="category-title">2 Jumbo Index</div>
+                <div class="category-divider"></div>
+                <span class="hit-label">ХІТ</span>
+                <img src="images/img4.jpg" alt="гральні карти">
+                <div class="product-title">Modiano Texas Poker 100% Plastic Light Red</div>
+                <div class="product-price">330 ГРН</div>
+                <a class="add-to-cart">У КОРЗИНУ</a>
+            </div>
+        </div>
+        <div class="swipe swipe-right">&gt;</div>
+    </div>
+    <div class="cart-icon">
+        <img src="images/cart-icon.png" alt="Корзина" id="cart-icon">
+        <span id="cart-count">0</span>
+    </div>
+    <div id="modal-cart-empty" class="modal">
+        <div class="modal-content">
+            <p>Корзина пуста</p>
+            <button id="close-modal">Закрити</button>
+        </div>
+    </div>        
+    <script src="scripts/script.js"></script>
+</body>
+</html>

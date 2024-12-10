@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Ваша корзина</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Назва товару</th>
+                    <th>Ціна за од.</th>
+                    <th>К-сть</th>
+                    <th>Сума</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <button id="pay-button">Оплатити</button>
+        <a href="index.html">Повернутись до покупок</a>        
+    </main>
+    <script src="scripts/cart.js"></script>
+</body>
+</html>
