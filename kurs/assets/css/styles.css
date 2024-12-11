@@ -890,24 +890,15 @@ h1, h2 {
 }
 
 .check-mark-icon {
-    font-size: 0.8rem;
-    height: 1.5rem;
-    width: 1.5rem;
     background-color: #FFF4E5;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: #262626;
 }
 
-.cross-mark-icon {
+.cross-mark-icon,
+.check-mark-icon {
     font-size: 0.8rem;
     height: 1.5rem;
     width: 1.5rem;
     border: 1px solid #F1F1F3;
-    box-sizing: border-box;
     border-radius: 4px;
     display: flex;
     align-items: center;
