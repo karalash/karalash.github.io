@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah L",
+        "image": "../assets/images/SarahL",
+        "previewText": "The web design course provided a solid foundation for me. The instructors were knowledgeable and supportive, and the interactive learning environment was engaging. I highly recommend it!",
+        "fullText": "The web design course provided a solid foundation for me. The instructors were knowledgeable and supportive, and the interactive learning environment was engaging. I highly recommend it! The step-by-step projects helped me build confidence and apply what I learned in real-world scenarios. I especially appreciated the detailed feedback on my assignments, which allowed me to improve quickly. The course materials were well-organized and easy to follow, even for someone like me with no prior experience. By the end of the course, I had a portfolio of designs that I proudly showcased to potential employers. This program not only taught me technical skills but also sparked my creativity. Thanks to the certificate I earned, I was able to land my first freelance web design job. If you're looking to start or advance your design career, this course is a fantastic choice!",
+        "altText": "Sarah L's avatar"
+    },
+    {
+        "id": 2,
+        "name": "Jason M",
+        "image": "../assets/images/JasonM",
+        "previewText": "The UI/UX design course exceeded my expectations. The instructor's expertise and practical assignments helped me improve my design skills. I feel more confident in my career now. Thank you!",
+        "fullText": "The UI/UX design course exceeded my expectations. The instructor's expertise and practical assignments helped me improve my design skills. I feel more confident in my career now. Thank you! The course covered everything from user research to creating wireframes and prototypes, giving me a complete understanding of the design process. I loved how the lessons combined theory with hands-on projects, making the learning experience both educational and fun. The feedback from the instructor was always constructive and helped me refine my work significantly. By the end of the course, I had a professional portfolio that impressed potential clients. I’ve already applied the techniques I learned to real-world projects, and the results have been amazing. This course has truly set me on the path to becoming a successful UI/UX designer. I’m so grateful for the opportunity to learn from such a fantastic program!",
+        "altText": "Jason M's avatar"
+    },
+    {
+        "id": 3,
+        "name": "Emily R",
+        "image": "../assets/images/EmilyR",
+        "previewText": "The mobile app development course was fantastic! The step-by-step tutorials and hands-on projects helped me grasp the concepts easily. I'm now building my own app. Great course!",
+        "fullText": "The mobile app development course was fantastic! The step-by-step tutorials and hands-on projects helped me grasp the concepts easily. I'm now building my own app. Great course! The instructor explained complex topics like API integration and responsive design in a way that was simple and engaging. I also appreciated the focus on real-world practices, which gave me the confidence to tackle challenges on my own. The project-based approach made learning fun and allowed me to see my progress in action. By the end of the course, I had a fully functional app that I’m proud to share. The support from the community of learners and the instructor was incredibly motivating. This course has been a game-changer for me, and I highly recommend it to anyone interested in app development!",
+        "altText": "Emily R's avatar"
+    },
+    {
+        "id": 4,
+        "name": "Michael K",
+        "image": "../assets/images/MichaelK",
+        "previewText": "I enrolled in the graphic design course as a beginner, and it was the perfect starting point. The instructor's guidance and feedback improved my design abilities significantly. I'm grateful for this course!",
+        "fullText": "I enrolled in the graphic design course as a beginner, and it was the perfect starting point. The instructor's guidance and feedback improved my design abilities significantly. I'm grateful for this course! The lessons were structured in a way that made even complex concepts easy to understand. I particularly enjoyed the focus on design principles like color theory, typography, and composition, which gave my work a professional edge. The hands-on assignments were challenging but incredibly rewarding, allowing me to build a portfolio as I learned. The supportive community of learners made the experience even better, as we could share our progress and inspire each other. By the end of the course, I felt confident using industry-standard tools like Adobe Illustrator and Photoshop. Thanks to this program, I’ve already taken on my first freelance design project. This course was a life-changing experience, and I highly recommend it to anyone starting their graphic design journey!",
+        "altText": "Michael K's avatar"
+    }
+]
