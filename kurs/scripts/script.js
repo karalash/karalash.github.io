@@ -129,7 +129,7 @@ window.addEventListener('scroll', function() {
 
     playButton.addEventListener("click", function() {
         const source = video.querySelector("source");
-        source.src = source.getAttribute("data-src");
+        source.src = source.getAttribute("src");
         video.load();
 
         videoPoster.style.display = "none";
