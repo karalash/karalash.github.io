@@ -1,0 +1,436 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our online design and development courses. Learn at your own pace, build real-world skills, and boost your career today!">
+    <title>Courses</title>
+    <link rel="icon" type="image/png" href="{% static 'website/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'website/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <button id="promo-button" onclick="window.location.href='/courses/'">
+            <span>Free Courses &#127775; Sale Ends Soon, Get It Now</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="header-block">
+            <svg class="logo-icon">
+                <use xlink:href="{% static 'website/sprites/sprites_home.svg' %}#main_logo"></use>
+            </svg>
+            <div>
+                <ul class="off-screen-menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="burger-menu-active-page"><a href="{% url 'courses' %}">Courses</a></li>
+                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="menu-active-page"><a href="{% url 'courses' %}">Courses</a></li>
+                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <button class="login-button" onclick="window.location.href='/login/'">Login</button>
+                <nav>
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>                        
+        </div>
+    </header>
+    <main class="courses-main">
+        <section class="courses-main-section">
+            <div class="page-header">
+                <h1 class="section-header">Online Courses on Design and Development</h1>
+                <p class="section-description">
+                    Welcome to our online course page, where you can enhance your skills in design and development. 
+                    Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. 
+                    Explore the courses below and find the perfect fit for your learning journey.
+                </p>
+            </div>
+            <div class="courses-details-cards-container">
+                <div class="course-details-card">
+                    <div class="course-description-block">
+                        <div>
+                            <h2>Web Design Fundamentals</h2>
+                            <p class="course-description">
+                                Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. 
+                                Develop the skills to create visually appealing and user-friendly websites.
+                            </p>
+                        </div>
+                        <button class="view-course-button" onclick="window.location.href='/courses/2/'">View Course</button>
+                    </div>
+                    <div class="course-pictures-container">
+                        <picture>
+                            <source srcset="{% static 'website/images/web_design_fundamentals.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/web_design_fundamentals.png' %}" alt="Web Design Fundamentals Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/web_design_fundamentals2.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/web_design_fundamentals2.png' %}" alt="Web Design Fundamentals Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/web_design_fundamentals3.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/web_design_fundamentals3.png' %}" alt="Web Design Fundamentals Course">
+                        </picture>
+                    </div>
+                    <div class="course-details-block">
+                        <div class="course-time-level-block">
+                            <span>4 Weeks</span>
+                            <span>Beginner</span>
+                        </div>
+                        <p class="course-author-name">By John Smith</p>
+                    </div>
+                    <div class="course-curriculum-block">
+                        <div>
+                            <h3>Curriculum</h3>
+                        </div>
+                        <div class="schedule-block">
+                            <div>
+                                <div class="block-number">01</div>
+                                <p>Introduction to HTML</p>
+                            </div>
+                            <div>
+                                <div class="block-number">02</div>
+                                <p>Styling with CSS</p>
+                            </div>
+                            <div>
+                                <div class="block-number">03</div>
+                                <p>Introduction to Responsive Design</p>
+                            </div>
+                            <div>
+                                <div class="block-number">04</div>
+                                <p>Design Principles for Web</p>
+                            </div>
+                            <div>
+                                <div class="block-number">05</div>
+                                <p>Building a Basic Website</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-details-card">
+                    <div class="course-description-block">
+                        <div>
+                            <h2>UI/UX Design</h2>
+                            <p class="course-description">
+                                Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). 
+                                Learn design principles, wireframing, prototyping, and usability testing techniques.
+                            </p>
+                        </div>
+                        <button class="view-course-button" onclick="window.location.href='/courses/1/'">View Course</button>
+                    </div>
+                    <div class="course-pictures-container">
+                        <picture>
+                            <source srcset="{% static 'website/images/ui_ux_design.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/ui_ux_design.png' %}" alt="UI/UX Design Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/ui_ux_design2.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/ui_ux_design2.png' %}" alt="UI/UX Design Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/ui_ux_design3.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/ui_ux_design3.png' %}" alt="UI/UX Design Course">
+                        </picture>
+                    </div>
+                    <div class="course-details-block">
+                        <div class="course-time-level-block">
+                            <span>6 Weeks</span>
+                            <span>Intermediate</span>
+                        </div>
+                        <p class="course-author-name">By Emily Johnson</p>
+                    </div>
+                    <div class="course-curriculum-block">
+                        <div>
+                            <h3>Curriculum</h3>
+                        </div>
+                        <div class="schedule-block">
+                            <div>
+                                <div class="block-number">01</div>
+                                <p>Introduction to UI/UX Design</p>
+                            </div>
+                            <div>
+                                <div class="block-number">02</div>
+                                <p>User Research and Personas</p>
+                            </div>
+                            <div>
+                                <div class="block-number">03</div>
+                                <p>Wireframing and Prototyping</p>
+                            </div>
+                            <div>
+                                <div class="block-number">04</div>
+                                <p>Visual Design and Branding</p>
+                            </div>
+                            <div>
+                                <div class="block-number">05</div>
+                                <p>Usability Testing and Iteration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-details-card">
+                    <div class="course-description-block">
+                        <div>
+                            <h2>Mobile App Development</h2>
+                            <p class="course-description">
+                                Dive into the world of mobile app development. 
+                                Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.
+                            </p>
+                        </div>
+                        <button class="view-course-button" onclick="window.location.href='/courses/3/'">View Course</button>
+                    </div>
+                    <div class="course-pictures-container">
+                        <picture>
+                            <source srcset="{% static 'website/images/mobile_app_development.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/mobile_app_development.png' %}" alt="Mobile App Development Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/mobile_app_development2.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/mobile_app_development2.png' %}" alt="Mobile App Development Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/mobile_app_development3.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/mobile_app_development3.png' %}" alt="Mobile App Development Course">
+                        </picture>
+                    </div>
+                    <div class="course-details-block">
+                        <div class="course-time-level-block">
+                            <span>8 Weeks</span>
+                            <span>Intermediate</span>
+                        </div>
+                        <p class="course-author-name">By David Brown</p>
+                    </div>
+                    <div class="course-curriculum-block">
+                        <div>
+                            <h3>Curriculum</h3>
+                        </div>
+                        <div class="schedule-block">
+                            <div>
+                                <div class="block-number">01</div>
+                                <p>Introduction to Mobile App Development</p>
+                            </div>
+                            <div>
+                                <div class="block-number">02</div>
+                                <p>Fundamentals of Swift Programming (iOS)</p>
+                            </div>
+                            <div>
+                                <div class="block-number">03</div>
+                                <p>Fundamentals of Kotlin Programming (Android)</p>
+                            </div>
+                            <div>
+                                <div class="block-number">04</div>
+                                <p>Building User Interfaces</p>
+                            </div>
+                            <div>
+                                <div class="block-number">05</div>
+                                <p>App Deployment and Testing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-details-card">
+                    <div class="course-description-block">
+                        <div>
+                            <h2>Graphic Design for Beginners</h2>
+                            <p class="course-description">
+                                Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. 
+                                Create visually stunning designs for print and digital media.
+                            </p>
+                        </div>
+                        <button class="view-course-button" onclick="window.location.href='/courses/4/'">View Course</button>
+                    </div>
+                    <div class="course-pictures-container">
+                        <picture>
+                            <source srcset="{% static 'website/images/graphic_design_for_beginners.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/graphic_design_for_beginners.png' %}" alt="Graphic Design for Beginners Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/graphic_design_for_beginners2.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/graphic_design_for_beginners2.png' %}" alt="Graphic Design for Beginners Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/graphic_design_for_beginners3.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/graphic_design_for_beginners3.png' %}" alt="Graphic Design for Beginners Course">
+                        </picture>
+                    </div>
+                    <div class="course-details-block">
+                        <div class="course-time-level-block">
+                            <span>10 Weeks</span>
+                            <span>Beginner</span>
+                        </div>
+                        <p class="course-author-name">By Sarah Thompson</p>
+                    </div>
+                    <div class="course-curriculum-block">
+                        <div>
+                            <h3>Curriculum</h3>
+                        </div>
+                        <div class="schedule-block">
+                            <div>
+                                <div class="block-number">01</div>
+                                <p>Introduction to Graphic Design</p>
+                            </div>
+                            <div>
+                                <div class="block-number">02</div>
+                                <p>Typography and Color Theory</p>
+                            </div>
+                            <div>
+                                <div class="block-number">03</div>
+                                <p>Layout Design and Composition</p>
+                            </div>
+                            <div>
+                                <div class="block-number">04</div>
+                                <p>Image Editing and Manipulation</p>
+                            </div>
+                            <div>
+                                <div class="block-number">05</div>
+                                <p>Designing for Print and Digital Media</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-details-card">
+                    <div class="course-description-block">
+                        <div>
+                            <h2>Front-End Web Development</h2>
+                            <p class="course-description">
+                                Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. 
+                                Build interactive and responsive websites.
+                            </p>
+                        </div>
+                        <button class="view-course-button" onclick="window.location.href='/courses/5/'">View Course</button>
+                    </div>
+                    <div class="course-pictures-container">
+                        <picture>
+                            <source srcset="{% static 'website/images/front_end_web_development.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/front_end_web_development.png' %}" alt="Front-End Web Development Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/front_end_web_development2.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/front_end_web_development2.png' %}" alt="Front-End Web Development Course">
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'website/images/front_end_web_development3.webp' %}" type="image/webp">
+                            <img src="{% static 'website/images/front_end_web_development3.png' %}" alt="Front-End Web Development Course">
+                        </picture>
+                    </div>
+                    <div class="course-details-block">
+                        <div class="course-time-level-block">
+                            <span>10 Weeks</span>
+                            <span>Intermediate</span>
+                        </div>
+                        <p class="course-author-name">By Michael Adams</p>
+                    </div>
+                    <div class="course-curriculum-block">
+                        <div>
+                            <h3>Curriculum</h3>
+                        </div>
+                        <div class="schedule-block">
+                            <div>
+                                <div class="block-number">01</div>
+                                <p>HTML Fundamentals</p>
+                            </div>
+                            <div>
+                                <div class="block-number">02</div>
+                                <p>CSS Styling and Layouts</p>
+                            </div>
+                            <div>
+                                <div class="block-number">03</div>
+                                <p>JavaScript Basics</p>
+                            </div>
+                            <div>
+                                <div class="block-number">04</div>
+                                <p>Building Responsive Websites</p>
+                            </div>
+                            <div>
+                                <div class="block-number">05</div>
+                                <p>Introduction to Bootstrap and React</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contacts">
+                <svg class="logo-icon">
+                    <use xlink:href="{% static 'website/sprites/sprites_home.svg' %}#main_logo"></use>
+                </svg>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:hello@skillbridge.com"><p>hello@skillbridge.com</p></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+9191813232309"><p>+91 91813 23 2309</p></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://maps.app.goo.gl/Dee3JBHxcksiCeGE7" target="_blank"><p>Somewhere in the World</p></a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-nav-column">
+                    <h2><a href="{% url 'home' %}">Home</a></h2>
+                    <ul>
+                        <li><a href="{% url 'home' %}#benefits-section">Benefits</a></li>
+                        <li><a href="{% url 'home' %}#courses-section">Our Courses</a></li>
+                        <li><a href="{% url 'home' %}#testimonials-section">Our Testimonials</a></li>
+                        <li><a href="{% url 'home' %}#faq-section">Our FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h2><a href="{% url 'about_us' %}">About Us</a></h2>
+                    <ul>
+                        <li><a href="{% url 'about_us' %}">Company</a></li>
+                        <li><a href="{% url 'about_us' %}">Achievements</a></li>
+                        <li><a href="{% url 'about_us' %}">Our Goals</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-social-profiles">
+                <h2>Social Profiles</h2>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/Coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="https://x.com/coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2023 Skillbridge. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9077dc0957.js" crossorigin="anonymous"></script>
+    <script src="{% static 'website/scripts/script.js' %}"></script>
+</body>
+</html>

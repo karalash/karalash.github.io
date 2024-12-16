@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our online design and development courses. Learn at your own pace, build real-world skills, and boost your career today!">
+    <title>About Us</title>
+    <link rel="icon" type="image/png" href="{% static 'website/images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'website/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <button id="promo-button" onclick="window.location.href='/courses/'">
+            <span>Free Courses &#127775; Sale Ends Soon, Get It Now</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <div class="header-block">
+            <svg class="logo-icon">
+                <use xlink:href="{% static 'website/sprites/sprites_home.svg' %}#main_logo"></use>
+            </svg>
+            <div>
+                <ul class="off-screen-menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'courses' %}">Courses</a></li>
+                    <li class="burger-menu-active-page"><a href="{% url 'about_us' %}">About Us</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'courses' %}">Courses</a></li>
+                    <li class="menu-active-page"><a href="{% url 'about_us' %}">About Us</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <button class="login-button" onclick="window.location.href='/login/'">Login</button>
+                <nav>
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>                        
+        </div>
+    </header>
+    <main class="about-us-main">
+        <div class="page-header">
+            <h1 class="section-header">About Skillbridge</h1>
+            <p class="section-description">
+                Welcome to our platform, where we are passionate about empowering individuals to master the world of design and development. 
+                We offer a wide range of online courses designed to equip learners with the skills and knowledge needed to succeed in the ever-evolving digital landscape.
+            </p>
+        </div>
+        <section id="achievements" class="about-us-section"></section>
+        <section id="goals" class="about-us-section"></section>
+        <div class="banner">
+            <div class="banner-text">
+                <p class="banner-heading"><span>Together</span>, let's shape the future of digital innovation</p>
+                <p class="banner-paragraph">Join us on this exciting learning journey and unlock your potential in design and development.</p>
+            </div>
+            <button onclick="window.location.href='/signup/'">Join Now</button>
+            <svg class="background-logo">
+                <use xlink:href="{% static 'website/sprites/sprites_home.svg' %}#logo_background"></use>
+            </svg>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contacts">
+                <svg class="logo-icon">
+                    <use xlink:href="{% static 'website/sprites/sprites_home.svg' %}#main_logo"></use>
+                </svg>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:hello@skillbridge.com"><p>hello@skillbridge.com</p></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+9191813232309"><p>+91 91813 23 2309</p></a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://maps.app.goo.gl/Dee3JBHxcksiCeGE7" target="_blank"><p>Somewhere in the World</p></a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-nav-column">
+                    <h2><a href="{% url 'home' %}">Home</a></h2>
+                    <ul>
+                        <li><a href="{% url 'home' %}#benefits-section">Benefits</a></li>
+                        <li><a href="{% url 'home' %}#courses-section">Our Courses</a></li>
+                        <li><a href="{% url 'home' %}#testimonials-section">Our Testimonials</a></li>
+                        <li><a href="{% url 'home' %}#faq-section">Our FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-column">
+                    <h2><a href="{% url 'about_us' %}">About Us</a></h2>
+                    <ul>
+                        <li><a href="{% url 'about_us' %}">Company</a></li>
+                        <li><a href="{% url 'about_us' %}">Achievements</a></li>
+                        <li><a href="{% url 'about_us' %}">Our Goals</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-social-profiles">
+                <h2>Social Profiles</h2>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/Coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </a>
+                    <a href="https://x.com/coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/coursera" target="_blank">
+                        <div>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2023 Skillbridge. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9077dc0957.js" crossorigin="anonymous"></script>
+    <script src="{% static 'website/scripts/script.js' %}"></script>
+</body>
+</html>
