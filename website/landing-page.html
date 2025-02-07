@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlight Company</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <svg class="small-logo">
+            <use xlink:href="media/sprites/sprites.svg#devlight-logo"></use>
+        </svg>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#our-clients">Clients</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#our-projects">Projects</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#subscription">Subscribe</a></li>
+            </ul>
+        </nav>
+        <ul class="off-screen-menu">
+            <li><a href="#our-clients">Clients</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#our-projects">Projects</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#subscription">Subscribe</a></li>
+        </ul>
+        <nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction">
+            <div class="introduction-block">
+                <h1>Powering mobile business</h1>
+                <p>
+                    Expertise in Mobile App Development. Flexible, user-centric approach for startups and enterprises. 
+                    Delivering impactful mobile solutions.
+                </p>
+                <div>
+                    <button>Contact Now</button>
+                    <svg class="dotted-texture">
+                        <use xlink:href="media/sprites/sprites.svg#dot-ornament"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="banner-block">                    
+                <picture class="banner">
+                    <source srcset="media/images/dev-team.webp">
+                    <img src="media/images/dev-team.png" alt="Devlight Team">
+                </picture>
+                <div class="circle-block"></div>
+                <div class="partial-circled-block"></div>
+            </div>
+        </section>
+        <section id="our-clients">
+            <div>
+                <h1>Our Clients</h1>
+                <p class="section-paragraph">Several selected clients, who already believe in our service.</p>
+            </div>
+            <div class="logos-block">
+                <svg class="medium-logo-block">
+                    <use xlink:href="media/sprites/sprites.svg#vodafone-logo"></use>
+                </svg>
+                <svg class="medium-logo-block">
+                    <use xlink:href="media/sprites/sprites.svg#visa-logo"></use>
+                </svg>
+                <svg class="medium-logo-block">
+                    <use xlink:href="media/sprites/sprites.svg#movinga-logo"></use>
+                </svg>
+                <svg class="medium-logo-block">
+                    <use xlink:href="media/sprites/sprites.svg#tailor-brands-logo"></use>
+                </svg>
+            </div>
+        </section>
+        <section id="services">
+            <div>
+                <div class="services-text-block">
+                    <h1>How can we help your Business ?</h1>
+                    <p class="section-paragraph">We craft innovative mobile apps that drive business growth.</p>
+                </div>
+                <div class="vertical-blocks-container">
+                    <div class="vertical-blocks-row">
+                        <div class="rounded-card">
+                            <div class="icon-box">
+                                <svg>
+                                    <use xlink:href="media/sprites/sprites.svg#mobile-development-icon"></use>
+                                </svg>
+                            </div>
+                            <h2>Mobile App Development</h2>
+                            <p>Develop cutting-edge mobile apps for iOS & Android</p>
+                        </div>
+                        <div class="rounded-card">
+                            <div class="icon-box">
+                                <svg>
+                                    <use xlink:href="media/sprites/sprites.svg#development-team-icon"></use>
+                                </svg>
+                            </div>
+                            <h2>Hire App Developers</h2>
+                            <p>Our skilled and experienced team specializes in creating world-class Mobile apps</p>
+                        </div>
+                    </div>
+                    <div class="vertical-blocks-row">
+                        <div class="rounded-card">
+                            <div class="icon-box">
+                                <svg>
+                                    <use xlink:href="media/sprites/sprites.svg#ui-ux-icon"></use>
+                                </svg>
+                            </div>
+                            <h2>UX & UI Design</h2>
+                            <p>Keep your users engaged with interactive designs, seamless navigation, and stunning visuals</p>
+                        </div>
+                        <div class="rounded-card">
+                            <div class="icon-box">
+                                <svg>
+                                    <use xlink:href="media/sprites/sprites.svg#app-store-icon"></use>
+                                </svg>
+                            </div>
+                            <h2>App Store Optimization</h2>
+                            <p>Boost app installs with our top-tier mobile app marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partial-circled-block"></div>
+            <div class="big-partial-circled-block"></div>
+            <svg class="dotted-texture">
+                <use xlink:href="media/sprites/sprites.svg#dot-ornament"></use>
+            </svg>
+            <div class="border-circle-block"></div>
+        </section>
+        <section id="our-projects">
+            <div>
+                <div class="video-container">
+                    <picture onclick="showDialog()">
+                        <source srcset="media/images/promo.webp">
+                        <img src="media/images/promo.png" alt="Video Promo">
+                    </picture>
+                    <span onclick="showDialog()"><i class="fa-solid fa-play"></i></span>
+                    <div class="circle-block"></div>
+                </div>
+                <div id="videoDialog" class="video-dialog">
+                    <div class="video-content">
+                        <span class="close-button" onclick="closeDialog()">&times;</span>
+                        <iframe id="youtube-video" width="90%" height="auto" src="https://www.youtube.com/embed/NMfMRrfWyD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>IT company specializing in mobile app development</h1>
+                <p class="section-paragraph">
+                    We digitize businesses across all sectors of the economy through apps, innovation, and strategic consulting. 
+                    We have created 120 projects, with more than 35 million downloads. Our clients include: Vodafone, Nova Poshta, Fishka, Sense Bank, DOC.UA, OKWINE, Portmone, Tailor Brands, NOVUS, VARUS, BROCARD, Ukrnafta, and others.
+                </p>
+                <div class="partial-circled-block"></div>
+            </div>
+        </section>
+        <section id="reviews">
+            <div>
+                <h1>What our client say</h1>
+                <p class="section-paragraph">Several selected clients, who already believe in our service.</p>
+            </div>
+            <div class="review-container">
+                <div>
+                    <picture>
+                        <source id="author-img-webp" srcset="media/images/author1.webp">
+                        <img id="author-img" class="author-avatar" src="media/images/author1.png" alt="Author Avatar">
+                    </picture>
+                    <svg class="dotted-texture-blue">
+                        <use xlink:href="media/sprites/sprites.svg#dot-ornament-blue"></use>
+                    </svg>
+                    <div class="border-circle-block"></div>
+                </div>
+                <div>
+                    <p id="author-name">Andrii Danylik</p>
+                    <p id="review-text" class="section-paragraph">
+                        The mobile applications were well-received and caused an uptick in the partner’s revenue. 
+                        Devlight was a true partner that was always ready to help resolve problems. They were attentive and proactive about offering solution suggestions. 
+                        The project manager excelled at coordinating multiple teams.
+                    </p>
+                    <div class="radio-group">
+                        <input type="radio" id="radio1" name="options" checked />
+                        <label for="radio1"></label>
+                        <input type="radio" id="radio2" name="options" />
+                        <label for="radio2"></label>
+                        <input type="radio" id="radio3" name="options" />
+                        <label for="radio3"></label>
+                        <input type="radio" id="radio4" name="options" />
+                        <label for="radio4"></label>
+                        <input type="radio" id="radio5" name="options" />
+                        <label for="radio5"></label>
+                    </div>                      
+                </div>
+                <div>
+                    <picture>
+                        <source id="app-icon-webp" srcset="media/images/nova-poshta-icon.webp">
+                        <img id="app-icon" class="app-icon" src="media/images/nova-poshta-icon.png" alt="App Icon">
+                    </picture>
+                    <div class="circle-block"></div>
+                </div>
+            </div>
+        </section>
+        <section id="subscription">
+            <div class="blue-block">
+                <div>
+                    <h1>Subscribe Newsletter</h1>
+                    <p class="section-paragraph">We will update good news and promotion service</p>
+                </div>
+                <div class="dark-blue-block"></div>
+                <div class="input-container">
+                    <input type="email" placeholder="Enter your email.." />
+                    <button>Contact Now</button>
+                </div>
+                <div class="partial-circled-block"></div>
+                <svg class="dotted-texture-blue">
+                    <use xlink:href="media/sprites/sprites.svg#dot-ornament-blue"></use>
+                </svg>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-block">
+            <div>
+                <svg class="small-logo-block">
+                    <use xlink:href="media/sprites/sprites.svg#devlight-logo"></use>
+                </svg>
+                <p class="section-paragraph">We specialize in mobile app development, helping businesses become the number one brand on users’ smartphones.</p>
+                <div class="link-icons-block">
+                    <a target="_blank" href="https://www.facebook.com/devlight.io">
+                        <svg>
+                            <use xlink:href="media/sprites/sprites.svg#facebook-icon"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/devlightio">
+                        <svg>
+                            <use xlink:href="media/sprites/sprites.svg#twitter-icon"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://ua.linkedin.com/company/devlight">
+                        <svg>
+                            <use xlink:href="media/sprites/sprites.svg#linkedin-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-nav-block">
+                <nav>
+                    <ul>
+                        <li><a href="#introduction">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#our-projects">Projects</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2025 V.K.</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9077dc0957.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
