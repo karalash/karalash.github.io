@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /admin/help.html
+Sitemap: https://karalash.github.io/sitemap.xml
